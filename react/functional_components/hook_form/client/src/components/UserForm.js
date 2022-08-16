@@ -8,13 +8,7 @@ const UserForm = (props) => {
     const [ confirmpassword,setConfirmpassword] = useState("")
     const createUser = (e) => {
         e.preventDefault();
-        const newUser = {
-            userfirstname: userfirstname,
-            userlastname: userlastname,
-            useremail: useremail,
-            password: password,
-            confirmpassword: confirmpassword
-        }
+        const newUser = {userfirstname, userlastname, useremail, password, confirmpassword}
         console.log("Welcome", newUser)
     }
     return (
