@@ -1,14 +1,15 @@
 import React, {useState} from "react"
 
 const PersonCard = (props) => {
-    const [age,setYear] = useState(props.age);
+    const {firstName,lastName,age,color} = props
+    const [year,setYear] = useState(age);
     return(
         <>
-            <h1>{props.lastName}, {props.firstName}</h1>
-            <p>Age: {age}</p>
-            <p>Hair Color: {props.color}</p>
-            <button onClick ={(event) => setYear(age+1)}>Add a year to {props.firstName}</button>
-            <button onClick ={(event) => setYear(age-1)}>Subtract a year from {props.firstName}</button>
+            <h1>{lastName}, {firstName}</h1>
+            <p>Age: {year}</p>
+            <p>Hair Color: {color}</p>
+            <button onClick ={(event) => setYear(year+1)}>Add a year to {firstName}</button>
+            <button onClick ={(event) => setYear(year-1)}>Subtract a year from {firstName}</button>
         </>
     )
 }
