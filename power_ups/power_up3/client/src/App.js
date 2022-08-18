@@ -6,18 +6,18 @@ import PersonCard from './components/PersonCard';
 
 function App() {
 
-  const [name,setName] = useState("")
-  const [email,setEmail] = useState("")
-  const [password,setPassword] = useState("")
+  const [userName,setUserName] = useState("")
+  const [userEmail,setUserEmail] = useState("")
+  const [userPassword,setUserPassword] = useState("")
   const [newUser,setNewUser] = useState([])
 
   return (
     <div className="App">
-      {<h2>{JSON.stringify(newUser)}</h2>}
-      <Form name={name} email={email} password={password} setName={setName} setEmail={setEmail} setPassword={setPassword} newUser={newUser} setNewUser={setNewUser}/>
-      <View name={name} email={email} password={password}/>
+      <h2>{JSON.stringify(newUser)}</h2>
+      <Form userName={userName} userEmail={userEmail} userPassword={userPassword} setUserName={setUserName} setUserEmail={setUserEmail} setUserPassword={setUserPassword} newUser={newUser} setNewUser={setNewUser}/>
+      <View userName={userName} userEmail={userEmail} userPassword={userPassword}/>
       {
-        newUser.map((item,index) => (<PersonCard key={index} name={item.name} email={item.email} password={item.password}/>))
+        newUser.map((item,index) => (<PersonCard key={index} userName={item.userName} userEmail={item.userEmail} userPassword={item.userPassword}/>))
       }
     </div>
   );
