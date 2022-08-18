@@ -1,13 +1,13 @@
 import React from 'react'
 
 const View = (props) => {
-    const {name,email,password} = props
+    const {userName,userEmail,userPassword} = props
 
     return (
         <div>
-            <p>{name}</p>
-            <p>{email}</p>
-            <p>{password}</p>
+            <p>{userName}</p>
+            <p>{userEmail}</p>
+            <p>{userPassword}</p>
         </div>
     )
 }
