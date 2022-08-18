@@ -1,6 +1,8 @@
 import React from 'react'
 
 const PersonCard = (props) => {
+    const {userName,userEmail,userPassword,newUser} = props
+    console.log("New User",newUser)
 
     const styledDiv={
         display:'flex',
@@ -16,9 +18,9 @@ const PersonCard = (props) => {
     return (
         <div style={styledDiv}>
             <h2>Person Card</h2>
-            <h2>Name: {props.name}</h2>
-            <h2>Email: {props.email}</h2>
-            <h2>Password: {props.password}</h2>
+            <h2>Name: {userName}</h2>
+            <h2>Email: {userEmail}</h2>
+            <h2>Password: {userPassword}</h2>
         </div>
     )
 }
