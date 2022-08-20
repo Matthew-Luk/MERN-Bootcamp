@@ -1,0 +1,31 @@
+.header {
+    background-color: #6aa84f;
+    height: 100px;
+    width: 100vw;
+    margin-bottom: 15px;
+    }
+
+.navigation {
+    height: 500px;
+    width: 350px;
+    background-color: #6fa8dc;
+    margin-right: 10px;
+}
+
+.main {
+    height: 600px;
+    width: 1150px;
+    background-color: #e06666;
+}
+
+.subcontents {
+    height: 420px;
+    width: 350px;
+    background-color: #ffd966;
+}
+
+.advertisement {
+    height: 100px;
+    width: 1100px;
+    background-color: #b4a7d6;
+}
