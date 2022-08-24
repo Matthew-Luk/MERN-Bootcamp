@@ -1,0 +1,100 @@
+.App {
+  padding:0px;
+  margin:0px;
+  box-sizing:border-box;
+  text-align: center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.cards{
+
+  min-height:80vh;
+  padding:20px;
+  display:flex;
+  /* background-color:red;  */
+  justify-content:center;
+  flex-wrap:wrap;
+  overflow-y:scroll;
+  margin-top:50px;
+  
+}
+
+.card{
+  color:white;
+  height:200px;
+  width:200px;
+  margin:10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:2px;
+  background-color:#B3A125;
+  border:2px solid #B3A125;
+  border-radius:5px;
+  box-shadow:2px 2px 4px black;
+  transition:.2s;
+  
+}
+
+.card-view{
+  height:500px;
+  width:75%;
+  margin:10px;
+  display:flex;
+  flex-direction:column;
+  /* justify-content:center; */
+  align-items:center;
+  gap:2px;
+  background-color:#B3A125;
+  border:2px solid #B3A125;
+  border-radius:5px;
+  box-shadow:2px 2px 4px black;
+  color:white;
+  
+}
+
+.btn{
+  padding:10px;
+  border-radius:5px;
+  border:none;
+  background-color:#FFDE00;
+  color:white;
+  font-size:20px;
+  box-shadow:1px 1px 4px black;
+  transition:.2s;
+
+}
+
+.exit {
+  background-color:#CC0000;
+  height:40px;
+  width:40px;
+  display:flex;
+  align-self:end;
+  justify-self:start;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  font-size:20px;
+  font-weight:bold;
+  border:none;
+  transition:.2s;
+
+}
+
+img{
+  transition:.2s
+}
+
+.hover:hover {
+  transform:scale(1.09)
+}
+
+.img-hover:hover{
+  transform:scale(1.3)
+}
