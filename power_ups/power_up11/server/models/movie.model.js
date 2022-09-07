@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+
 const MovieSchema = new mongoose.Schema({
     title:{
         type:String,
@@ -7,7 +8,7 @@ const MovieSchema = new mongoose.Schema({
     },
     genre:{
         type:String,
-        required:[true,"A genre is required"],
+        required:[true,"A Genre is required"],
         enum:{
             values:[
                 'Comedy',
@@ -30,7 +31,7 @@ const MovieSchema = new mongoose.Schema({
     },
     boxArt:{
         type:String,
-        required:[true,"Image is necesary"]
+        required:[true,"Image is necessary"]
     },
     duration:{
         type:String,
@@ -56,9 +57,8 @@ const MovieSchema = new mongoose.Schema({
     }
 
 
-
 },{timestamps:true})
 
 const Movie = mongoose.model("Movie",MovieSchema)
 
-module.exports = MovieSchema
+module.exports = Movie
