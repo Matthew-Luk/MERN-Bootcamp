@@ -12,7 +12,7 @@ const MovieController = {
             res.status(201).json({movie:movie})
         })
         .catch((err)=>{
-            res.status(500).json({message:"Something went wrong",error:err})
+            res.status(400).json({message:"Something went wrong",error:err})
         })
     },
 
@@ -38,12 +38,12 @@ const MovieController = {
     },
     //Update
     updateOne:(req,res) => {
-        Movie.findByIdAndUpdate({_id:req.params.id},req.body,{new:true,runValidator:true})
+        Movie.findByIdAndUpdate({_id:req.params.id},req.body,{new:true,runValidators:true})
         .then((movie)=>{
             res.status(200).json({updatedMovie:movie})
         })
         .catch((err)=>{
-            res.status(500).json({message:"Something went wrong",error:err})
+            res.status(400).json({message:"Something went wrong",error:err})
         })
     },
 
