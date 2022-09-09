@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 
 const MovieAdd = () => {
 
@@ -13,6 +14,7 @@ const MovieAdd = () => {
     const [friendly,setFriendly] = useState(false)
     const [release,setRelease] = useState("")
     const [errors,setErrors] = useState({})
+    const navigate = useNavigate()
 
     const genres = [ "",
         'Comedy',
@@ -34,59 +36,43 @@ const MovieAdd = () => {
     const ratings = ["",'G','PG','PG-13','R','NC-17']
 
     const handleTitle = (e) => {
-        if(!e.target.value.trim()){
-            return
-        }
+        setErrors("")
         setTitle(e.target.value)
     }
 
     const handleGenre = (e) => {
-        if(!e.target.value.trim()){
-            return
-        }
+        setErrors("")
         setGenre(e.target.value)
     }
 
     const handleArt = (e) => {
-        if(!e.target.value.trim()){
-            return
-        }
+        setErrors("")
         setArt(e.target.value)
     }
 
     const handleDuration = (e) => {
-        if(!e.target.value.trim()){
-            return
-        }
+        setErrors("")
         setDuration(e.target.value)
     }
 
     const handleRating = (e) => {
-        if(!e.target.value.trim()){
-            return
-        }
+        setErrors("")
         setRating(e.target.value)
     }
 
     const handleActors = (e) => {
-        if(!e.target.value.trim()){
-            return
-        }
+        setErrors("")
         setActors(e.target.value)
     }
 
     const handleFriendly = (e) => {
-        if(!e.target.value.trim()){
-            return
-        }
+        setErrors("")
         setFriendly(e.target.value)
     }
 
     const handleRelease = (e) => {
-        if(!e.target.value.trim()){
-            return
-        }
-        setRelease(e.target.value)
+        setErrors("")
+        setRelease(parseInt(e.target.value))
     }
 
     const handleSubmit = (e) => {
@@ -104,6 +90,8 @@ const MovieAdd = () => {
         axios.post("http://localhost:8000/api/v1/movies",movie)
         .then((movie)=>{
             console.log(movie)
+            setTitle("")
+            navigate("/movies")
         })
         .catch((err)=>{
             console.log(err.reponse.data.error.errors)
