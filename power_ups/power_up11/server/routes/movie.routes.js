@@ -14,6 +14,7 @@ const routes = (app) => {
     app.put('/api/v1/movies/:id', MovieController.updateOne)
     
     //Delete
+    app.delete('/api/v1/movies', MovieController.deleteAll)
     app.delete('/api/v1/movies/:id', MovieController.deleteOne)
 }
 
