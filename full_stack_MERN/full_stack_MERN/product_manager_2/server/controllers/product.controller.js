@@ -16,9 +16,17 @@ const ProductController = {
         Product.find()
         .then((allProducts) => {
             res.json({products:allProducts})
-            console.log(allProducts)
         })
-        .then(res => res.json())
+        .catch((err)=>{
+            res.status(400).json({message:"Something went wrong",error:err})
+        })
+    },
+
+    getOne:(req,res) => {
+        Product.find({_id:req.params.id})
+        .then((product) => {
+            res.json({product:product})
+        })
         .catch((err)=>{
             res.status(400).json({message:"Something went wrong",error:err})
         })
