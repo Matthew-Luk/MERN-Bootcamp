@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import '../App.css';
+import { useNavigate } from 'react-router-dom';
 
 const PersonForm = (props) => {
 
@@ -8,7 +9,7 @@ const PersonForm = (props) => {
     const [title, setTitle] = useState(""); 
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");
-    console.log("productList2:" + productList)
+    const navigate = useNavigate()
 
     const onSubmitHandler = (e) => {
 
@@ -21,10 +22,11 @@ const PersonForm = (props) => {
             .then(res=>{
                 console.log(res);
                 console.log(res.data);
-                // setProductList([...productList, res.data])
+                setProductList([...productList, res.data])
                 setTitle("")
                 setPrice("")
                 setDescription("")
+                navigate('/')
             })
             .catch(err=>console.log(err))
     }
@@ -42,7 +44,8 @@ const PersonForm = (props) => {
     }
     
     return (
-        <form className="form" onSubmit={onSubmitHandler}>
+        <>
+            <form className="form" onSubmit={onSubmitHandler}>
             <h1>Product Manager</h1>
             <div className='inputblocks'>
                 <label>Title</label><br/>
@@ -60,6 +63,8 @@ const PersonForm = (props) => {
                 <input className='createbtn' type="submit" value="Create"/>
             </div>
         </form>
+        </>
+        
     )
 }
 export default PersonForm;
