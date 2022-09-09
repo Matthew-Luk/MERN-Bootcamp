@@ -1,5 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, { useEffect} from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import '../App.css';
 
 const ProductList = (props) => {
 
@@ -9,20 +11,21 @@ const ProductList = (props) => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/product")
         .then((res) => {
-            console.log("res.data:" + res.data)
-            setProductList(res.data)
+            console.log("res.data:" , res.data.products)
+            setProductList(res.data.products)
         })
         .catch((err) => {
             console.log(err)
         })
-    },[])
+    }, [])
 
     return (
         <div>
+            <h3>All Products:</h3>
             {
-                productList?.map((item,index) => (
-                <div key={index}>
-                    <h2>{item.title},{item.price},{item.description}</h2>
+                productList.map((item,index) => (
+                <div className='allproducts' key={index}>
+                    <Link to={`/product/${item._id}`}> {item.title}</Link>
                 </div>
                 ))
             }
