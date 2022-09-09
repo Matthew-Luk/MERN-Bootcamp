@@ -45,3 +45,15 @@
   justify-content: center;
   margin-bottom: 50px;
 }
+
+.productcard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.allproducts{
+  display: flex;
+  justify-content: center;
+}
