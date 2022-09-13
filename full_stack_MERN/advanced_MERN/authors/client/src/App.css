@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid gray;
+  width: 50vw;
+  height: 200px;
+  justify-content: center;
+}
+
+.label{
+  display: flex;
+  justify-content: left;
+  margin-right: 135px;
+  margin-bottom: 5px;
+}
+
+.btnrow{
+  margin-top: 10px;
+}
+
+.btn{
+  margin-right: 10px;
+  color: white;
+  background-color: #66bbff;
+  border: 0px;
+  height:30px;
+  width: 100px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+h3{
+  color: #8222ff;
+}
