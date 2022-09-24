@@ -1,11 +1,12 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import {Link} from 'react-router-dom'
+import React, { useEffect} from 'react'
+import {Link, useNavigate} from 'react-router-dom'
 import '../App.css';
 
-const AllPlayers = () => {
+const AllPlayers = (props) => {
 
-    const [playerList,setPlayerList] = useState([])
+    const {playerList,setPlayerList,removeFromDom} = props
+    const navigate = useNavigate()
 
     useEffect(() => {
         axios.get('http://localhost:8000/api/players')
@@ -17,6 +18,17 @@ const AllPlayers = () => {
             console.log(err)
         })
     },[])
+
+    const handleDelete = (playerId) => {
+        axios.delete("http://localhost:8000/api/players/" + playerId)
+        .then((res) => {
+            removeFromDom(playerId)
+            navigate('/players/list')
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
 
     return (
         <div>
@@ -42,9 +54,9 @@ const AllPlayers = () => {
                             {
                                 playerList.map((item,index) => (
                                     <tr key={index}>
-                                        <td>{item.name}</td>
+                                        <td className='goop'><Link to={`/players/edit/${item._id}`}>{item.name}</Link></td>
                                         <td>{item.position}</td>
-                                        <td><button id='deletebtn'>Delete</button></td>
+                                        <td><button onClick={(e) => {handleDelete(item._id)}} id='deletebtn'>Delete</button></td>
                                     </tr>
                                 ))
                             }
