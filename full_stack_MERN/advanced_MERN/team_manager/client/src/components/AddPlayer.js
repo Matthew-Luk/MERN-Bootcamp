@@ -40,8 +40,8 @@ const AddPlayer = (props) => {
     return (
         <div>
             <div className='navbar1'>
-                <Link>Manage Players | </Link>
-                <Link> Manage Player Status</Link>
+                <Link to={'/players/list'}>Manage Players | </Link>
+                <Link to={'/status/game/1'}> Manage Player Status</Link>
             </div>
             <div className='content'>
                 <div className='navbar2'>
