@@ -95,3 +95,41 @@
   height: 30px;
   font-size: large;
 }
+
+.navbar3 h1{
+  display: flex;
+  justify-content: flex-start;
+  margin: 40px;
+}
+
+.gamelinks{
+  font-size: x-large;
+  margin-bottom: 40px;
+}
+
+#playingbtn{
+  background-color: #009e0f;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+  width: 150px;
+  height: 30px;
+  font-size: large;
+}
+
+#notplayingbtn{
+  background-color: #cf2a27;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+  width: 150px;
+  height: 30px;
+  font-size: large;
+}
+
+#undecidedbtn{
+  background-color: #ffff00;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+  width: 150px;
+  height: 30px;
+  font-size: large;
+}
