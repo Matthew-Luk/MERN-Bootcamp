@@ -41,3 +41,11 @@ button{
   display: flex;
   flex-direction: column;
 }
+
+.btn{
+  height: 30px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border: none;
+  border-radius: 5px;
+}
