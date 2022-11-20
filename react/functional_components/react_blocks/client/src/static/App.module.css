@@ -1,31 +1,34 @@
-.header {
-    background-color: #6aa84f;
-    height: 100px;
+.header{
+    background-color:  #6aa84f;
     width: 100vw;
-    margin-bottom: 15px;
-    }
+    height: 140px;
+    margin-bottom: 20px;
+}
 
-.navigation {
+.navigation{
+    flex: 1;
+    background-color: #6fa8dc;
     height: 500px;
     width: 350px;
-    background-color: #6fa8dc;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
-.main {
-    height: 600px;
-    width: 1150px;
+.main{
+    display: flex;
+    flex-direction: column;
     background-color: #e06666;
+    flex: 3;
+    height: 600px;
 }
 
-.subcontents {
-    height: 420px;
-    width: 350px;
+.subcontents{
     background-color: #ffd966;
+    height: 400px;
+    width: 335px;
 }
 
-.advertisement {
-    height: 100px;
-    width: 1100px;
+.advertisement{
     background-color: #b4a7d6;
+    width: 1050px;
+    height: 140px;
 }
