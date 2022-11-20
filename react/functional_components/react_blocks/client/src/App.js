@@ -25,7 +25,6 @@ function App() {
             <Advertisement />
           </div>
         </Main>
-
       </div>
     </div>
   );
