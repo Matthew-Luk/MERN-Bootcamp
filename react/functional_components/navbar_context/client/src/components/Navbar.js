@@ -14,7 +14,7 @@ const Navbar = () => {
 
     return (
         <div style={styledNav}>
-            <h2>Hi {state}</h2>
+            <h2>Hi {state}!</h2>
         </div>
     )
 }
