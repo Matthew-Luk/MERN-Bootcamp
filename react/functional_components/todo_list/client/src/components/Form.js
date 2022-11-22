@@ -1,9 +1,5 @@
 import React, {useState} from 'react'
-
-const styledDiv = {
-    border:'2px solid black',
-    padding: '20px'
-}
+import '../App.css';
 
 const Form = (props) => {
 
@@ -24,15 +20,11 @@ const Form = (props) => {
     }
 
     return (
-        <div style={styledDiv}>
-            <form onSubmit={submitHandler}>
-                <div>
-                    <label htmlFor="">Todo: </label>
-                    <input value={todo.todo} onChange={inputHandler} type="text"></input>
-                </div>
-                <div><button>Submit</button></div>
-            </form>
-        </div>
+        <form className='form' onSubmit={submitHandler}>
+            <label htmlFor="">Todo: </label>
+            <input value={todo.todo} onChange={inputHandler} type="text"></input>
+            <button className='btn'>Submit</button>
+        </form>
     )
 }
 
