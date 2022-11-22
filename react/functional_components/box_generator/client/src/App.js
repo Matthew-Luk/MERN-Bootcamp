@@ -1,6 +1,6 @@
 import './App.css';
-import Form from './components/Form';
 import {useState} from 'react'
+import Form from './components/Form';
 import Box from './components/Box';
 
 function App() {
