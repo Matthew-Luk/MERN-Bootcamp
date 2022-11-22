@@ -1,19 +1,5 @@
 import React from 'react'
-
-    const styledItem = {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
-
-    const styledButton = {
-        height: '30px',
-        backgroundColor: 'red',
-        color: 'white',
-        border: '2px solid black',
-        marginLeft: '10px'
-    }
-
+import '../App.css';
 
 const List = (props) => {
     const {todoList,setTodoList} = props
@@ -33,19 +19,17 @@ const List = (props) => {
     }
 
     return (
-        <div>
-            <h2>list</h2>
-
+        <div className='container'>
+            <h2>To Do List: </h2>
             {
                 todoList.map((item,index) => (
-                    <div style={styledItem} key={index}>
+                    <div className='item' key={index}>
                         <h3 style={item.completed?{textDecoration: 'line-through'}:null}>To do: {item.todo}</h3>
                         <input onChange={()=>clickHandler(index)} type="checkbox"></input>
-                        <button style={styledButton} onClick={()=>deleteHandler(index)}>Delete</button>
+                        <button className='btn2' onClick={()=>deleteHandler(index)}>Delete</button>
                     </div>
                 ))
             }
-
         </div>
     )
 }
