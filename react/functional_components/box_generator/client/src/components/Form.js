@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css';
 
 const Form = (props) => {
 
@@ -7,6 +8,7 @@ const Form = (props) => {
     const submitHandler = (e) => {
         e.preventDefault()
         setListColor([...listColor,color])
+        setColor("")
     }
 
     const handleColor = (e) => {
@@ -15,10 +17,10 @@ const Form = (props) => {
 
     return (
         <div>
-            <form onSubmit={submitHandler}>
-                <label htmlFor="">Color: </label>
-                <input onChange={handleColor} type="text" name='color'/>
-                <input type="submit" value="Submit"/>
+            <form className='form' onSubmit={submitHandler}>
+                <label htmlFor="color">Color: </label>
+                <input id='color_input' onChange={handleColor} type="text" name='color' value={color}/>
+                <input id='btn' type="submit" value="Add"/>
             </form>
         </div>
     )
