@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabsList{
+  display: flex;
+  margin-top: 30px;
+}
+
+.selectedTab, .nonSelectedTab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+  border: 1px solid black;
+  height: 40px;
+  width: 80px;
+  transition-duration: 1s;
+}
+
+.results{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+.selectedTab{
+  background-color: black;
+  color: white;
+}
+
+.selectedTab:hover, .nonSelectedTab:hover{
+  width: 120px;
+  height: 70px;
+}
