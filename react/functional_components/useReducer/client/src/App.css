@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.styledDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.styledDiv input{
+  width: 350px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.styledDiv2{
+  display: flex;
+}
+
+#submit_btn{
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: #009be1;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+.error{
+  color: red;
+}
