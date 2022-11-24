@@ -1,7 +1,14 @@
-import React, {useState,useEffect} from 'react'
+import React, { useEffect } from 'react'
 
     const styledButton = {
-        margin: '30px 0px'
+        margin: '30px 0px',
+        width: '150px'
+    }
+
+    const styledList = {
+        display:'flex',
+        flexDirection:'column',
+        alignItems:'flex-start'
     }
 
 const Script = (props) => {
@@ -24,7 +31,7 @@ const Script = (props) => {
     },[])
 
     return (
-        <div>
+        <div style={styledList}>
             <button style={styledButton}>Fetch Pokemon</button>
             {
                 state?.map((item,index) =>(
