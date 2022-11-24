@@ -21,7 +21,6 @@ const Home = (props) => {
         })
     }
 
-
     const optionHandler = (e) => {
         setState(e.target.value)
     }
@@ -29,7 +28,6 @@ const Home = (props) => {
     const numberHandler =(e) => {
         setNumber(e.target.value)
     }
-
 
     return (
         <div>
