@@ -7,7 +7,13 @@ const Word = (props) => {
     const {word} = useParams()
 
     return (
-        <div className='styledDiv'>The word is: {word}</div>
+        <div className='styledDiv'>
+            {
+                isNaN(word)?
+                <p>This is a word: {word}</p>:
+                <p>This is a number: {word}</p>
+            }
+        </div>
     )
 }
 
