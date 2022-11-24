@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
       <Routes>
         <Route path='/' element={<Home state={state} setState={setState} number={number} setNumber={setNumber} list={list} setList={setList} data={data} setData={setData}/>}/>
         <Route path='/people/:number' element={<People state={state} setState={setState} number={number} setNumber={setNumber} list={list} setList={setList} data={data} setData={setData}/>} />
@@ -30,7 +30,7 @@ function App() {
         <Route path='/starships/:number' element={<Starships state={state} setState={setState} number={number} setNumber={setNumber} list={list} setList={setList} data={data} setData={setData}/>} />
         <Route path='/error' element={<Error/>}/>
       </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
