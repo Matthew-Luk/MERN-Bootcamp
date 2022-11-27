@@ -39,6 +39,7 @@
 .createbtn{
   margin-top: 30px;
   width: 200px;
+  height: 30px;
   background-color: #e6e6e6;
   border: 2px solid #e6e6e6;
   border-radius: 5px;
@@ -56,4 +57,13 @@
 .allproducts{
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+}
+
+#product{
+  color: black;
+}
+
+#product:hover{
+  text-decoration: underline;
 }
