@@ -21,11 +21,11 @@ const ProductList = (props) => {
 
     return (
         <div>
-            <h3>All Products:</h3>
+            <h1>All Products:</h1>
             {
                 productList.map((item,index) => (
                 <div className='allproducts' key={index}>
-                    <Link to={`/product/${item._id}`}> {item.title}</Link>
+                    <Link id='product' to={`/product/${item._id}`}> {item.title}</Link>
                 </div>
                 ))
             }
