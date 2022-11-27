@@ -3,11 +3,10 @@ import ProductForm from '../components/ProductForm';
 import ProductList from '../components/ProductList';
 import '../App.css';
 
-
 const Main = (props) => {
-    
+
     const [productList, setProductList] = useState([])
-    
+
     return (
         <div className='main'>
             <ProductForm productList={productList} setProductList={setProductList} />
@@ -16,4 +15,5 @@ const Main = (props) => {
         </div>
     )
 }
+
 export default Main;
