@@ -50,29 +50,30 @@ const PersonForm = (props) => {
     const descriptionHandler = (e) => {
         setDescription(e.target.value)
     }
-    
+
     return (
         <>
             <form className="form" onSubmit={updateProduct}>
-            <h1>Update Product</h1>
-            <div className='inputblocks'>
-                <label>Title</label><br/>
-                <input className='input' onChange = {titleHandler} type="text" value={title}/>
-            </div>
-            <div className='inputblocks'>
-                <label>Price $</label><br/>
-                <input className='input' onChange = {priceHandler} type="text" value={price}/>
-            </div>
-            <div className='inputblocks'>
-                <label>Description</label><br/>
-                <input className='input' onChange = {descriptionHandler} type="text" value={description}/>
-            </div>
-            <div>
-                <input className='createbtn' type="submit" value="Update"/>
-            </div>
-        </form>
+                <h1>Update Product</h1>
+                <div className='inputblocks'>
+                    <label>Title</label><br/>
+                    <input className='input' onChange = {titleHandler} type="text" value={title}/>
+                </div>
+                <div className='inputblocks'>
+                    <label>Price $</label><br/>
+                    <input className='input' onChange = {priceHandler} type="text" value={price}/>
+                </div>
+                <div className='inputblocks'>
+                    <label>Description</label><br/>
+                    <input className='input' onChange = {descriptionHandler} type="text" value={description}/>
+                </div>
+                <div>
+                    <input className='createbtn' type="submit" value="Update"/>
+                </div>
+            </form>
         </>
-        
+
     )
 }
+
 export default PersonForm;
