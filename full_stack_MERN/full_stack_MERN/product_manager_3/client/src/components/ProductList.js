@@ -31,7 +31,6 @@ const ProductList = (props) => {
         })
     }
 
-
     return (
         <div>
             <h3>All Products:</h3>
@@ -39,10 +38,10 @@ const ProductList = (props) => {
                 productList.map((item,index) => (
                 <div className='allproducts' key={index}>
                     <div>
-                        <Link to={`/product/${item._id}`}> {item.title}</Link>
+                        <Link id='product' to={`/product/${item._id}`}> {item.title}</Link>
                     </div>
                     <div className='allproductsbtn'>
-                        <button className='btn'><Link to={`/product/edit/${item._id}`}>Edit</Link></button>
+                        <button className='btn'><Link id='edit_btn' to={`/product/edit/${item._id}`}>Edit</Link></button>
                         <button className='btn' onClick={(e) => {handleDelete(item._id)}}>Delete</button>
                     </div>
                 </div>
