@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {BrowserRouter, Routes, Router, Route, Navigate} from 'react-router-dom';
 import Main from './views/Main';
 import OneProduct from './components/OneProduct';
 import Update from './components/Update';
-
 
 function App() {
   return(
@@ -19,4 +18,5 @@ function App() {
       </div>
     ) 
   }
+
 export default App;
