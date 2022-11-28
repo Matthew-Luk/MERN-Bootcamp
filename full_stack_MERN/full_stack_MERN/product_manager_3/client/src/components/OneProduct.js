@@ -36,8 +36,10 @@ const OneProduct = () => {
             <h3>{product.title}</h3>
             <p>Price: ${product.price}</p>
             <p>Description: {product.description}</p>
-            <button><Link to={`/product/edit/${id}`}>Edit</Link></button>
-            <button onClick={handleDelete}>Delete</button>
+            <div className="oneproductbtns">
+                <button><Link id="edit_btn" to={`/product/edit/${id}`}>Edit</Link></button>
+                <button onClick={handleDelete}>Delete</button>
+            </div>
         </div>
     )
 }
