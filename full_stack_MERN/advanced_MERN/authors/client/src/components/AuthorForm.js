@@ -48,7 +48,7 @@ const AuthorForm = (props) => {
                     <input type="text" onChange={ nameHandler }></input>
                     {
                         error ?
-                        <p>{error}</p>:
+                        <p className='error'>{error}</p>:
                         ''
                     }
                 </div>
