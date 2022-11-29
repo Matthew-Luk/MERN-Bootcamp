@@ -64,7 +64,7 @@ const AddPlayer = (props) => {
                     </div>
                     <div className='addplayerinput'>
                         <label className='label1'>Preferred Position:</label>
-                        <input onChange={positionHandler} type="text" name=""  className='input1'/>
+                        <input onChange={positionHandler} type="text" name="" className='input1'/>
                     </div>
                     {
                         error?
