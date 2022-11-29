@@ -38,8 +38,13 @@
   width: 100px;
   border-radius: 10px;
   font-weight: 700;
+  padding-bottom: 30px;
 }
 
-h3{
+h3, #item_name{
   color: #8222ff;
+}
+
+.error{
+  color: red;
 }
