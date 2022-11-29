@@ -57,7 +57,7 @@ const EditAuthor = () => {
                     <input onChange={nameHandler} type="text" value={name}/>
                     {
                         error ?
-                        <p>{error}</p>:
+                        <p className='error'>{error}</p>:
                         ''
                     }
                 </div>
