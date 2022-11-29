@@ -46,10 +46,10 @@ const AllAuthors = (props) => {
                     {
                         authorList.map((item,index)=>(
                             <tr key={index}>
-                                <td>{item.name}</td>
+                                <td id='item_name'>{item.name}</td>
                                 <td>
                                     <Link to={`/edit/${item._id}`}><button className='btn'>Edit</button></Link>
-                                    <button className='btn' onClick={(e) => {handleDelete(item._id)}}>Delete</button>
+                                    <button id='delete_btn' className='btn' onClick={(e) => {handleDelete(item._id)}}>Delete</button>
                                 </td>
                             </tr>
                         ))
